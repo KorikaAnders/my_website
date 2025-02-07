@@ -35,7 +35,7 @@ Use at least 2 properties that style fonts*/
     would jump straight into the foreground so it remains.*/
     
     #infinite-scrolling {
-      background-image: url('adventure2background.jpg');
+      background-image: url('images/adventure2background.jpg');
       position:relative;
       z-index: -1;
       width: 110%;
@@ -81,7 +81,7 @@ Use at least 2 properties that style fonts*/
     complicated graphics in nothing but CSS before and I am evil but 
     I am not insane.*/
     #gradienttext{
-        background-image: url('textbackground.png');
+        background-image: url(/images/textbackground.png);
         max-height: 2em;}
 
 
@@ -138,6 +138,17 @@ Use at least 2 properties that style fonts*/
     just felt like a really interesting way to dig around css and see
     how to make something look a bit more interesting than my previous
     webpage.*/
+    
+    /*this doesn't really do anything as all text already lacks background colors
+    but I'm at a bit of a loss as how to integrate the rest of the requirements
+    while not seeming extraniouus, so this is what an Attribute selector looks
+    like. It takes all the text and says "Hey... don't have a background color"*/
+    *[text] {background-color:transparent;}
+
+    /*the relational selectors are also a bit of a pain as there's just not a lot of
+    text on this site to relate to. HTML wise it's a very simple site with all the
+    work going on in the CSS, the curse of the hyperfocus. 
+
 
 /*class selector*/
 
