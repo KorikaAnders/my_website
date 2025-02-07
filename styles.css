@@ -81,7 +81,7 @@ Use at least 2 properties that style fonts*/
     complicated graphics in nothing but CSS before and I am evil but 
     I am not insane.*/
     #gradienttext{
-        background-image: url(textbackground.png);
+        background-image: url('textbackground.png');
         max-height: 2em;}
 
 
