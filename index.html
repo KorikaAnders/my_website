@@ -1,7 +1,48 @@
 <!DOCTYPE html>
 <html>
-    <body>
-<!-- our web page (index.html) must use at least one of each of the following HTML elements:
+<head>
+<meta name="description" content="I have birthed a great evil upon the internet and would have done worse if I knew Javascript. God cannot forgive my sins">
+<title>Sonic Adventure 2 Menu</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="/images/favicon.ico"> <!--favicon credit: https://www.steamgriddb.com/icon/912-->
+</head>
+<body>
+    <!--this is the logo in the center, it was a bigger pain in the ass than I expected to get it to sit where I wanted it to sit
+    and even now I don't know how well it will play with other screen resolutions.-->
+<main>
+    <div>
+        <img 
+            src="/images/soniclogo.png"
+            id="floating" 
+            >;
+    </div>
+        <!--I wanted to get a thick outline on this text with .css but apparently it doesn't support that? this is as close as I could get and I'm still not super happy with it-->
+        <h1>Press START</h1>
+     
+</main>
+<footer>
+    <!--this is another disappointment, I couldn't get a thick outline on the header, and I couldn't figure out how to contain the gradient to just hide behind the text, though I'm
+    more certain there is a way if I wanted to fiddle around with it even longer, but this site is already overdue-->
+<p id="gradienttext">Original Game © SEGA<br>©SONICTEAM/SEGA, 2001,2002</p>
+
+<!--That's right, an audio element. I did try making autoplay work but I was foiled by modern web design. I am the reason that Jesus wept in the Garden of Gethsemane,
+ eventually I want to figure out how to get it so if you press enter it plays the music, but for now it's constrained to a tiny little box under the <p> -->
+<audio autoplay controls>
+    <source src="cursedthings/sonicmenu.mp3" type="audio/mpeg">
+    <source src="cursedthings/sonicmenu.ogg" type ="audio/ogg">
+</audio>
+</footer>
+
+<!--This is the scrolling background which I had a lot of trouble with, luckily I had a friend who was an experienced web developer who was able to point me in the right direction.
+his share of my sins will be accounted for on judgement day, though he had no idea what he helped create.-->
+<div id="box">
+    <div id="infinite-scrolling"></div>
+</div>
+</body>
+</html>
+
+<!-- v Old requirements for the assignment last week v 
+our web page (index.html) must use at least one of each of the following HTML elements:
 
     <p>
     <h1>
@@ -17,36 +58,4 @@ Make sure you include a few comments in your code documenting your webpage.
 
 Review the rubric below for other requirements for this assignment.
 
-No CSS style sheet is required this time, so don't expect your webpage to look great yet!-->
-    <h1>Welcome to the website about designing websites.</h1>
-        
-        <main>
-            <p>
-                The subject of this website is subject to change based off my whims and whether or not I have a psychology paper due in less than a week
-                please take the time to enjoy that this site is about the idea of designing websites for now, and be excited for other future topics
-            </p>
-            <img src="it_run.png" alt="factual">
-            
-            <h2>A list of Future Topics This Website Could Be About!!</h2> <!--this is a header 2, it's smaller than header 1 -->
-            <ul>   
-                <li>Foxes and the things I think could be pretty if they had foxes in them</li>
-                <li>Elbows, boring, or future transgressive trend?</li>
-                <li>What's the deal with LED Headlights on the Road?</li>
-                <li>The unbearable sadness of being happy</li>
-                <li>Why AI totally isn't a bubble this time, seriously guys I just need another 6 billion dollars and it'll work I swear</li>
-                <li>and so much more</li>
-            </ul>
-        
-            <a href="https://dimden.dev/">This is not my website</a>
-
-            <p>But the web could look like that again. Do you remember when the web was beautiful and amazing? Before Silicon Valley&copy; sanitized and corpatized it?
-            We could go back! We must return.
-            </p> 
-            <!--I'm genuinely actually serious about this. I hate modern web design principles. I hate Corporate Memphis. I just want the web to a unique
-            and beautiful jungle again, instead of a shitty HOA Walled Garden with 10 billion cameras pointed at it's visitors -->
-        </main>
-    
-        <img src="power_riding.gif" alt="weee">
-    <footer>this is the footer for a website, it's such a nice footer. say thank you to the footer out loud.</footer>
-    </body>
-</html>
+No CSS style sheet is required this time, so don't expect your webpage to look great yet!--> 

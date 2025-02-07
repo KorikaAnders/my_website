@@ -1,0 +1,147 @@
+/*
+Use at least 1 of each of the following:
+    A type selector
+    An ID OR class selector
+    A relational selector
+    A combination selector
+    An attribute OR pseudo-class OR a pseudo-element
+Use only relative units of measurement
+Specify colors with RGB values or hex codes
+Set the color of at least one element
+Use at least 2 properties that style fonts*/
+
+    /*This helps maintain the illusion you're on a video game menu screen by preventing you from scrolling forever.*/
+    html {
+    overflow-y: hidden;
+    }
+
+    /*this bit keeps a stinky white border from popping up around the body*/
+    body {
+        margin:0%;
+    }
+
+    /*this portion is the background image for the website, I am told
+    that an image of this size shouldn't be allowed to exist on the web
+    another addition to my many crimes*/
+    #box {
+      margin-top: -1%;
+      height: 3199px;
+      width: 100%;
+    }
+
+    /*This is the bit that sets up the background image and tells it where
+    to go on the z axis. I'm told this is also terrible practice to use
+    but for whatever reason anytime I took the z-index away the background
+    would jump straight into the foreground so it remains.*/
+    
+    #infinite-scrolling {
+      background-image: url('images/adventure2background.jpg');
+      position:relative;
+      z-index: -1;
+      width: 110%;
+      height: 200%; 
+      animation: scroll 15s linear infinite;
+    }
+    
+    /*Here's the header bit, I know you hate Text Shadow and this will not
+    likely change your opinion of it. But it is the only option that gets
+    close to the original menu look. still has it's defficiencies, like
+    the lower left portion of the P and other letters with right angles*/
+    h1{
+        position:absolute;
+        font-size: 2.8em;
+        margin-top: 33%;
+        margin-left: 41%;
+        align-items: center;
+        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        text-shadow: 2px 2px 3px #FFADEF, -2px -2px 3px #ffADEF, 3px 3px 3px #FFADEF, -3px -3px 3px #FFADEF, 4px 4px 3px #FFADEF, -4px -4px 3px #FFADEF, 
+                     2px 2px 3px #FFADEF, -2px -2px 3px #ffADEF, 3px 3px 3px #FFADEF, -3px -3px 3px #FFADEF, 4px 4px 3px #FFADEF, -4px -4px 3px #FFADEF,
+                    -6px -6px 2px #000000, 6px 6px 6px #000000, -6px -6px 2px #000000, 6px 6px 2px #000000;
+    }
+
+    /*This is the text for the footer, by the time I got to here most of 
+    this I had figured out how to do, though getting the right spacing
+    and getting that break in the <p> tag was annoying*/
+    footer{
+        z-index: 2;
+        position:absolute;
+        font-size: 1.9em;
+        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        color: #FFFFFF;
+        margin-top: 42%;
+        margin-left: 2%;
+        line-height: 1em;
+    }
+
+    /*Here's the dirty gradient texture I used, would be so much
+    better if I could get it to outline the text, but here we are.
+    spacing isn't the same as the real menu, but that's true of all the
+    actual text. I really wanted to have as little image elements in this
+    site as I could realistically handle. I've seen someone code entire
+    complicated graphics in nothing but CSS before and I am evil but 
+    I am not insane.*/
+    #gradienttext{
+        background-image: url(/images/textbackground.png);
+        max-height: 2em;}
+
+
+    /*This is what tells the logo to do it's little floaty bounce thing
+    and makes it look a bit more interesting to actually look at. It
+    also centers the logo on the screen, and is where about 40% of my
+    time making this went. Coding is really annoying because a task that
+    sounds simple is actually incredibly complicated.*/    
+    #floating {
+        display:block;
+        margin-left: 25%;
+        margin-right: 25%;
+        margin-top: 8%;
+        width: 50%;
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        animation: float 3s infinite;
+    }
+
+    /*The animations, here's the scrolly bit, my friend got me started 
+    on things, I can't remember what I originally used as a transform
+    but it was incredibly hacky and way more complicated than this
+    basically the 0% is slowly transforming into 100% over 15 seconds
+    it was fun fine tuning it to get the right result*/
+    @keyframes scroll {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-50%);  
+      }
+      
+    }
+
+    /*the final animation, and this is what makes the icon do it's little
+    bounce going up and down.*/
+    @keyframes float {
+        0% {
+            transform: translateY(0);
+        }
+        50%{
+            transform: translateY(-5%);
+        }
+        100%{
+            transform: translateY(0%);
+        }
+        }
+    
+    /*there's still a lot I'd like to do with this, like see if I can 
+    emulate the rest of the menus with just HTML and CSS but that'll have
+    to wait, also if you'd prefer I not do that at all I wont. This
+    just felt like a really interesting way to dig around css and see
+    how to make something look a bit more interesting than my previous
+    webpage.*/
+
+/*class selector*/
+
+/*relational selector*/
+
+/*combination selector*/
+
+/*attribute*/
