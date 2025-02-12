@@ -1,0 +1,175 @@
+html {
+  overflow-y: hidden;
+  background-color: #000000;
+}
+
+body {
+  margin: 0%;
+}
+
+#box {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  opacity: 20%;
+}
+
+#box div {
+  position: absolute;
+  width: 100%;
+  height: 3199px;
+  background-repeat: repeat;
+}
+
+#box div:nth-child(even) {
+  top: -3198px;
+}
+
+.background-characters {
+  background-image: url('adventure2background.jpg');
+  /*background image*/
+  animation: 90s scroll linear infinite;
+}
+
+.blue-bubbles-fast {
+  background-image: url('blue1.png');
+  position: absolute;
+
+  animation: scroll 13s linear infinite;
+}
+
+.blue-bubbles-slow {
+  background-image: url('blue2.png');
+  position: absolute;
+
+  animation: scroll 20s linear infinite;
+}
+
+.pink-bubbles-fast {
+  background-image: url('pink1.png');
+  position: absolute;
+  animation: scroll 11s linear infinite;
+}
+
+.pink-bubbles-slow {
+  background-image: url('pink2.png');
+  position: absolute;
+  animation: scroll 10s linear infinite;
+}
+
+.Combo-color-bubbles {
+  background-image: url('combocolor.png');
+  position: absolute;
+  animation: scroll 19s linear infinite;
+}
+
+#wrappedup {
+  opacity: 20%;
+}
+
+#themenu {
+  position: absolute;
+  margin-block: 10%;
+  margin-inline: 35%;
+}
+
+li {
+  color: white;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  background-image: url('menubar.png');
+  font-size: 4em;
+  text-align: center;
+  list-style: none;
+  opacity: 100%;
+  width: 120%;
+  background-color: aqua;
+  border: #000000;
+  border-style: solid;
+  opacity: 100%;
+}
+
+a {
+  text-decoration: none;
+} /*keeps the link from having an underline in it*/
+
+a:link,
+a:visited {
+  color: black;
+  opacity: .6;
+} /*instructions on how the link text should appear so it doesn't look different even when you visited the link*/
+
+a:hover,
+a:focus {
+  color: #FFFFFF;
+  text-shadow: 2px 2px #172342;
+  text-shadow: 4px 4px #172342;
+  opacity: 1;
+} /*Got the instructions for the menu text to light up and appear white upon hovering*/
+
+
+/*This is the bit that sets up the background image and tells it where
+    to go on the z axis. I'm told this is also terrible practice to use
+    but for whatever reason anytime I took the z-index away the background
+    would jump straight into the foreground so it remains.*/
+
+#infinite-scrolling {
+  background-image: url('adventure2background.jpg');
+  opacity: 100%;
+  position: relative;
+  z-index: -1;
+  width: 110%;
+  height: 200%;
+  animation: scroll 6s linear infinite;
+  opacity: .06;
+}
+
+
+/*This is what tells the logo to do it's little floaty bounce thing
+    and makes it look a bit more interesting to actually look at. It
+    also centers the logo on the screen, and is where about 40% of my
+    time making this went. Coding is really annoying because a task that
+    sounds simple is actually incredibly complicated.*/
+#floating {
+  display: block;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 8%;
+  width: 50%;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  opacity: 45;
+}
+
+/*The animations, here's the scrolly bit, my friend got me started 
+    on things, I can't remember what I originally used as a transform
+    but it was incredibly hacky and way more complicated than this
+    basically the 0% is slowly transforming into 100% over 15 seconds
+    it was fun fine tuning it to get the right result*/
+@keyframes scroll {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(3198px);
+  }
+
+}
+
+/*the final animation, and this is what makes the icon do it's little
+    bounce going up and down.*/
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}

@@ -1,58 +1,51 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta name="description" content="I have birthed a great evil upon the internet and would have done worse if I knew Javascript. God cannot forgive my sins">
-<title>Sonic Adventure 2 Menu</title>
-<link rel="stylesheet" href="styles.css">
-<link rel="icon" href="favicon.ico"> <!--favicon credit: https://www.steamgriddb.com/icon/912-->
+    <meta name="description"
+        content="I have birthed a great evil upon the internet and would have done worse if I knew Javascript. God cannot forgive my sins">
+    <title>Sonic Adventure 2 Menu</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico"> <!--favicon credit: https://www.steamgriddb.com/icon/912-->
 </head>
+
 <body>
-    <!--this is the logo in the center, it was a bigger pain in the ass than I expected to get it to sit where I wanted it to sit
-    and even now I don't know how well it will play with other screen resolutions.-->
-<main>
-    <div>
-        <img src="logo.png" id="floating" >;
+    <div id="box">
+        <div class="background-characters"></div>
+        <div class="background-characters"></div>
+        <div class="blue-bubbles-fast"></div>
+        <div class="blue-bubbles-fast"></div>
+        <div class="blue-bubbles-slow"></div>
+        <div class="pink-bubbles-fast"></div>
+        <div class="pink-bubbles-fast"></div>
+        <div class="pink-bubbles-slow"></div>
+        <div class="pink-bubbles-slow"></div>
+        <div class="combo-color-bubbles"></div>
+        <div class="combo-color-bubbles"></div>
     </div>
-        <!--I wanted to get a thick outline on this text with .css but apparently it doesn't support that? this is as close as I could get and I'm still not super happy with it-->
-        <h1>Press START</h1>
-     
-</main>
-<footer>
-<!--That's right, an audio element. I did try making autoplay work but I was foiled by modern web design. I am the reason that Jesus wept in the Garden of Gethsemane,
- eventually I want to figure out how to get it so if you press enter it plays the music, but for now it's constrained to a tiny little box under the <p> -->
-<audio controls>
-    <source src="sonicmenu.mp3" type="audio/mpeg">
-    <source src="sonicmenu.ogg" type ="audio/ogg">
-</audio>
-    <!--this is another disappointment, I couldn't get a thick outline on the header, and I couldn't figure out how to contain the gradient to just hide behind the text, though I'm
-    more certain there is a way if I wanted to fiddle around with it even longer, but this site is already overdue-->
-<p id="gradienttext">Original Game © SEGA<br>©SONICTEAM/SEGA, 2001,2002</p>
+    <!--A friend of mine helped me add the parallaxing bubbles from the original menu background
+                    and helped me figure out how to clean up most of my code to get things to work the way
+                    they do in the game. The timing could still use a little clean-up but I have a psych paper
+                    that's due.-->
+    <main>
+        <div>
+            <img src="logo.png" id="floating">;
+        </div>
+        <!--Here we have our link, you can finally PRESS START!! it takes you to the next page. I thought about pulling
+       in the file select screen, but it felt more than unnessessary without adding on javascript that I do not
+       know, so it just takes you to the main menu of the game-->
+        <h1><a href="mainmenu.html">Press START</a></h1>
 
-</footer>
 
-<!--This is the scrolling background which I had a lot of trouble with, luckily I had a friend who was an experienced web developer who was able to point me in the right direction.
-his share of my sins will be accounted for on judgement day, though he had no idea what he helped create.-->
-<div id="box">
-    <div id="infinite-scrolling"></div>
-</div>
-</body>
-</html>
-
-<!-- v Old requirements for the assignment last week v 
-our web page (index.html) must use at least one of each of the following HTML elements:
-
-    <p>
-    <h1>
-    <ul> or <ol>
-    <li>
-    <a>
-    <main>  
+    </main>
     <footer>
-    <img>
-    A character entity
+        <audio controls>
+            <source src="sonicmenu.mp3" type="audio/mpeg">
+            <source src="sonicmenu.ogg" type="audio/ogg">
+        </audio>
+        <p id="gradienttext">Original Game &copy SEGA<br>&copySONICTEAM/SEGA, 2001,2002</p>
 
-Make sure you include a few comments in your code documenting your webpage.
+    </footer>
+</body>
 
-Review the rubric below for other requirements for this assignment.
-
-No CSS style sheet is required this time, so don't expect your webpage to look great yet!--> 
+</html>
